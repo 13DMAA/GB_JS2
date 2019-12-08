@@ -1,21 +1,113 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>eShop</title>
     <link rel="stylesheet" href="reset.css">
+    <style>
+        body {
+            background-color: rgb(245, 245, 245);
+        }
+
+        header {
+            background: rgb(243, 230, 156);
+            padding: 10px 30px;
+            display: flex;
+            justify-content: flex-end;
+            border: 2px solid skyblue;
+        }
+
+        .cart-button,
+        .buyGoodsBtn {
+            background: skyblue;
+            color: rgb(255, 255, 255);
+            border: 2px solid skyblue;
+            padding: 5px 20px;
+            font-weight: 700;
+        }
+
+        .cart-button:hover,
+        .buyGoodsBtn:hover {
+            border-color: skyblue;
+            background-color: transparent;
+            color:skyblue
+        }
+
+        .buyGoodsBtn:active,
+        .cart-button:active {
+            border-color: skyblue;
+            background-color: skyblue;
+            color: white;
+        }
+
+        .cart-button:active {
+            border: 2px solid skyblue;
+        }
+
+        main {
+            padding: 0 5%;
+            border: 2px solid skyblue;
+            border-top: none;
+        }
+
+        .goods-list {
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .goods-item {
+            background-color: #fff;
+            border: 2px solid skyblue;
+            margin: 10px 5px;
+            padding: 10px;
+            width: 200px;
+            /* height: 250px; */
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .goods-item-img {
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        .goods-item-title,
+        .goods-item-price {
+            width: 100%;
+            text-align: center;
+        }
+
+        .ruble:before {
+            content: "Цена:\a0";
+        }
+
+        .ruble:after {
+            content: "\a0\20BD";
+        }
+        
+        .buyGoodsBtn {
+            margin-top: 10px;
+        }
+
+    </style>
 </head>
+
 <body>
-<header>
-    <button class="cart-button">Корзина</button>
-</header>
-<main>
-    <div class="goods-list"></div>
-</main>
-<script src="index.js"></script>
-<!-- /// -->
+    <header>
+        <button class="cart-button">Корзина</button>
+    </header>
+    <main>
+        <div class="goods-list"></div>
+    </main>
+    <script src="index.js"></script>
+    <!-- /// -->
 </body>
+
 </html>
