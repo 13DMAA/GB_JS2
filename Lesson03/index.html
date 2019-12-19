@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>eShop</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        body {
+            background-color: rgb(245, 245, 245);
+            position: relative;
+        }
+
+        header {
+            background: rgb(243, 230, 156);
+            min-height: 40px;
+            padding: 10px 30px;
+            display: flex;
+            /* border: 2px solid skyblue; */
+        }
+
+        .cart-button,
+        .buyGoodsBtn {
+            background: skyblue;
+            color: rgb(255, 255, 255);
+            border: 2px solid skyblue;
+            padding: 5px 20px;
+            font-weight: 700;
+        }
+
+        .cart-button:hover,
+        .buyGoodsBtn:hover {
+            border-color: skyblue;
+            background-color: transparent;
+            color: skyblue
+        }
+
+        .buyGoodsBtn:active,
+        .cart-button:active {
+            border-color: skyblue;
+            background-color: skyblue;
+            color: white;
+        }
+
+        .cart-button:active {
+            border: 2px solid skyblue;
+        }
+
+        main {
+            padding: 0 5%;
+            /* border: 2px solid skyblue; */
+            border-top: none;
+        }
+
+        .goods-list {
+            padding-top: 10px;
+            display: flex;
+            /* justify-content: space-evenly; */
+            flex-wrap: wrap;
+        }
+
+        .goods-item {
+            background-color: #fff;
+            border: 2px solid skyblue;
+            margin: 10px 10px;
+            padding: 10px;
+            width: 200px;
+            /* height: 250px; */
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .goods-item-img {
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        .goods-item-title,
+        .goods-item-price {
+            width: 100%;
+            text-align: center;
+        }
+
+        .ruble:before {
+            content: "Цена:\a0";
+        }
+
+        .ruble:after {
+            content: "\a0\20BD";
+        }
+
+        .buyGoodsBtn {
+            margin-top: 10px;
+        }
+
+        .cart-button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+
+        .cart-goods {
+            border: 1px solid black;
+            position: fixed;
+            text-align: center;
+            padding: 5px;
+            width: 30%;
+            /* padding: 10px; */
+            background: white;
+            top: 50px;
+            right: 10px;
+        }
+
+        .cart-goods-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: nowrap;
+            margin: 10px;
+        }
+
+        .cart-goods-item-id {
+            visibility:hidden;
+            width:0;
+        }
+
+        .cart-goods-item-title {
+            width: 30%;
+        }
+
+        .cart-goods-item-img {
+            width: 15%;
+        }
+
+        .cart-goods-item-price {}
+
+        /* ////////Чат//////// */
+        .chat-container {
+            background-color: #eef1f5;
+            border: 1px solid #555555;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .chat-container-close-btn {
+            height: 36px;
+            width: 36px;
+            background: #ffffff;
+            border: 2px solid #2b2b2b;
+            border-radius: 50%;
+            position: absolute;
+            top: 0px;
+        }
+
+        .chat-container-close-btn-part1 {
+            height: 2px;
+            width: 22px;
+            background: #2b2b2b;
+            position: absolute;
+            top: 50%;
+            left: 7px;
+            transform: rotate(45deg);
+        }
+
+        .chat-container-close-btn-part2 {
+            height: 2px;
+            width: 22px;
+            background: #2b2b2b;
+            position: absolute;
+            top: 50%;
+            left: 7px;
+            transform: rotate(-45deg);
+        }
+
+        .chat-header {
+            background-color: #2b2b2b;
+            border: none;
+            padding: 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .chat-header-title {
+            padding-left: 20px;
+        }
+
+        .chat-consultant-name {
+            color: #f0f1f1;
+            font-size: 20px;
+        }
+
+        .chat-consultant-signature {
+            color: #9d9d9d;
+            font-size: 17px;
+        }
+
+        .chat-main {
+            background: #ffffff;
+            border: none;
+        }
+
+        .chat-footer {
+            position: absolute;
+            bottom: 0;
+        }
+
+        .el-hidden {
+            visibility: hidden;
+        }
+
+        .chat-footer,
+        .chat-footer-form,
+        .chat-textarea {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button class="cart-button">Корзина</button>
+    </header>
+    <main>
+        <div class="goods-list"></div>
+    </main>
+    <script src="main.js"></script>
+    <!-- <script src="chat.js"></script> -->
+    <!-- /// -->
+</body>
+
+</html>
